@@ -1,6 +1,12 @@
 // Declarations
 const searchButton = document.getElementById('search-button');
 const citySearchInput = document.getElementById('city-search');
+const APIKey = "ac3cf12de3a2b963a1bb1bad3582936f";
+const queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" +citySearchInput + "&appid=" +APIKey;
+
+var citySearch() {
+    fetch(queryURL);
+} 
 
 // TODO: save inputs in #city-search to localStorage
 // TODO: Generate button in #search-list => <button class="btn btn-secondary w-100 mb-3 p-2">Atlanta</button> from local storage (maximum 10 previous searches)
