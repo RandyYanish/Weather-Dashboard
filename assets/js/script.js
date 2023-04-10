@@ -4,7 +4,7 @@ const citySearchInput = document.getElementById('city-search');
 const APIKey = "ac3cf12de3a2b963a1bb1bad3582936f";
 const queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" +citySearchInput + "&appid=" +APIKey;
 
-var citySearch() {
+function loadWeatherDashboard() {
     fetch(queryURL);
 } 
 
