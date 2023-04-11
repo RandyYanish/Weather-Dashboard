@@ -2,10 +2,13 @@
 const searchButton = document.getElementById('search-button');
 const citySearchInput = document.getElementById('city-search');
 const APIKey = "ac3cf12de3a2b963a1bb1bad3582936f";
-const queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" +citySearchInput + "&appid=" +APIKey;
+let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearchInput.value + "&appid=" + APIKey;
 
 function loadWeatherDashboard() {
-    fetch(queryURL);
+    fetch(queryURL)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
 } 
 
 // TODO: save inputs in #city-search to localStorage
@@ -22,4 +25,4 @@ function loadWeatherDashboard() {
 // THEN I am again presented with current and future conditions for that city
 
 // Event Listeners
-searchButton.addEventListener('click', loadWeatherDashboard)
+searchButton.addEventListener('click', loadWeatherDashboard());
