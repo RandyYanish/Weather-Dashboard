@@ -1,6 +1,7 @@
 *   {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header  {
@@ -30,4 +31,9 @@ h6  {
 
 #search {
     display: flex;
+}
+
+.new {
+    border: 1px gray solid;
+    border-radius: 5px;
 }

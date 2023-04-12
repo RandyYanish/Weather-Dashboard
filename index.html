@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <main class="row">
+    <main class="row d-flex">
 
         <div class="col-lg-4 col-md-12">
             <div id="search" class="card-body bg-secondary bg-opacity-25 mb-3">
@@ -47,15 +47,26 @@
                 <div id="divider" class="divider"></div>
             </div>
 
-            <div id="search-list" class="container-fluid mb-3"></div>
+            <div id="search-list" class="container-fluid"></div>
 
         </div>
 
-        <div class="col-lg-8 col-md-12">
-            <h1 id="city-name">Weather</h1>
+        <div class="new col-lg-7 col-md-12 container">
+            <div class="container-fluid">
+                <div class="row">
+                    <h1 id="city-name" class="col-9">Weather</h1>
+                    <div id="current-weather-icon" class="col-3"></div>
+                </div>
+                <div class="row">
+                    <p class="mt-3">Temperature: <span id="temp-now"></span></p>
+                    <p class="mt-3">Wind Speed: <span id="wind-now"></span></p>
+                    <p class="mt-3">Humidity: <span id="humidity-now"></span></p>
+                </div>
+            </div>
+
+            <div class="new container-fluid col-lg-7 col-md-12"></div>
         </div>
 
-        <!-- TODO: Build out mock lay-out with openweathermap api to display current Temp, Wind, and Humidity of searched city -->
         <!-- TODO: Display 5-Day Forecast with openweathermap api to display current Temp, Wind, and Humidity of searched city -->
     </main>
 
