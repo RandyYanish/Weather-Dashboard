@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="min-vh-100 flex-column">
+<body class="min-vh-100 flex-column bg-dark text-white">
     <header class="mb-3 border-5 text-center bg-primary bg-opacity-50">
         <div class="">
             <h1 class="display-5 text-center">
@@ -38,7 +38,10 @@
                 <div id="search-bar" class="flex-column w-100">
                     <h2 class="text-lg-start text-md-center text-sm-center"> Search for a City:</h2>
                     <input id="city-search" class="input-group text-black p-1 text-secondary text-opacity-50 input-group border-0 form-control" placeholder="">
-                    <button id="search-button" class="btn btn-primary w-100 mt-2 opacity-75" >Search</button>
+                    <div class="d-flex">
+                        <button id="search-button" class="btn btn-primary w-50 mt-2 opacity-75" >Search</button>
+                        <button id="clear-history-button" class="btn btn-danger mt-2 opacity-75 w-50">Clear History</button>
+                    </div>
                 </div>
             
             </div>
@@ -51,20 +54,55 @@
 
         </div>
 
-        <div class="new col-lg-7 col-md-12 container">
+        <div class="col-lg-7 col-md-12 container">
             <div class="container-fluid">
                 <div class="row">
-                    <h1 id="city-name" class="col-9">Weather</h1>
-                    <div id="current-weather-icon" class="col-3"></div>
-                </div>
-                <div class="row">
+                    <h2 id="city-name" class="col-12">No location selected</h2>
+                    <img id="current-weather-icon" class="col-2" src=""></img>
                     <p class="mt-3">Temperature: <span id="temp-now"></span></p>
                     <p class="mt-3">Wind Speed: <span id="wind-now"></span></p>
                     <p class="mt-3">Humidity: <span id="humidity-now"></span></p>
+                    <h3>Future Forecast:</h3>
                 </div>
             </div>
 
-            <div class="new container-fluid col-lg-7 col-md-12"></div>
+            <div class="col-12 d-flex justify-content-around">
+                <div class="card shadow w-100">
+                    <p class="w-100 text-black" id="date-tomorrow"></p>
+                    <img id="weather-icon-tomorrow" class="w-100" src=""></img>
+                    <p class="w-100 text-black"><span id="temp-tomorrow"></span></p>
+                    <p class="w-100 text-black"><span id="wind-tomorrow"></span></p>
+                    <p class="w-100 text-black"><span id="humidity-tomorrow"></span></p>
+                </div>
+                <div class="card shadow w-100">
+                    <p class="w-100 text-black" id="date-in-2-days"></p>
+                    <img id="weather-icon-in-2-days" class="w-100" src=""></img>
+                    <p class="w-100 text-black"><span id="temp-in-2-days"></span></p>
+                    <p class="w-100 text-black"><span id="wind-in-2-days"></span></p>
+                    <p class="w-100 text-black"><span id="humidity-in-2-days"></span></p>
+                </div>
+                <div class="card shadow w-100">
+                    <p class="w-100 text-black" id="date-in-3-days"></p>
+                    <img id="weather-icon-in-3-days" class="w-100" src=""></img>
+                    <p class="w-100 text-black"><span id="temp-in-3-days"></span></p>
+                    <p class="w-100 text-black"><span id="wind-in-3-days"></span></p>
+                    <p class="w-100 text-black"><span id="humidity-in-3-days"></span></p>
+                </div>
+                <div class="card shadow w-100">
+                    <p class="w-100 text-black" id="date-in-4-days"></p>
+                    <img id="weather-icon-in-4-days" class="w-100" src=""></img>
+                    <p class="w-100 text-black"><span id="temp-in-4-days"></span></p>
+                    <p class="w-100 text-black"><span id="wind-in-4-days"></span></p>
+                    <p class="w-100 text-black"><span id="humidity-in-4-days"></span></p>
+                </div>
+                <div class="card shadow w-100">
+                    <p class="w-100 text-black" id="date-in-5-days"></p>
+                    <img id="weather-icon-in-5-days" class="w-100" src=""></img>
+                    <p class="w-100 text-black"><span id="temp-in-5-days"></span></p>
+                    <p class="w-100 text-black"><span id="wind-in-5-days"></span></p>
+                    <p class="w-100 text-black"><span id="humidity-in-5-days"></span></p>
+                </div>
+            </div>
         </div>
 
         <!-- TODO: Display 5-Day Forecast with openweathermap api to display current Temp, Wind, and Humidity of searched city -->
